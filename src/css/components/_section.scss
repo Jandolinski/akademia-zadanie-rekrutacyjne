@@ -55,6 +55,7 @@
     &__content-wrapper {
         width: 100%;
         max-width: 743px;
+        margin: 0 auto;
         display: flex;
         align-items: flex-start;
     }
@@ -112,7 +113,6 @@
     &--form {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
     }
 }
