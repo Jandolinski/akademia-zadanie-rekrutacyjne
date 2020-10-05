@@ -16,6 +16,40 @@
         left: 0;
         transform: translate(-47px, 22px);
     }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 43px;
+    }
+
+    &__heading {
+        margin-bottom: 22px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 97px;
+            height: 80px;
+            background-image: url('img/heading-arrow.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 0;
+            top: 0;
+            // transform: translate(100%, -20px);
+            transform: matrix(-.67,-.59,-.97,.64,0,0) translate(-85%,-92%);
+        }
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: #142138;
+        margin-bottom: 77px;
+    }
     
     &--small {
         max-width: 1013px;
