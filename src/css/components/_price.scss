@@ -1,0 +1,15 @@
+.price {
+    color: #2eb779;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 52px;
+    &__currency {
+        &::before {
+            content: '\00a0';
+        }
+    }
+    &--small {
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
