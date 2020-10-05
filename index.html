@@ -13,20 +13,20 @@
         <header class="header">
             <img src="dist/img/logo-akademia.png" alt="Akademia.pl" class="header__logo">
         </header>
-        <section class="section section--small section--first hidden" data-step="1">
+        <section class="section section--small section--first active" data-step="1">
             <div class="section__text-wrapper">
                 <h1 class="heading heading--h1 section__heading">Kalkulator ceny kursu</h1>
                 <p class="section__description">Tutaj pójdzie przykładowy tekst powitalny.</p>
-                <button type="button" aria-label="Przejdź do kalkulatora" class="btn btn--dark btn--large">Przejdź do kalkulatora</button>
+                <button id="start" type="button" aria-label="Przejdź do kalkulatora" class="btn btn--dark btn--large">Przejdź do kalkulatora</button>
             </div>
             <img src="dist/img/monety.png" alt="" class="section__decorator-img">
         </section>
         <div>
             <ol class="timeline">
-                <li class="timeline__item timeline__item--active">cena</li>
-                <li class="timeline__item">grupa docelowa</li>
-                <li class="timeline__item">zawartość kursu</li>
-                <li class="timeline__item">wynik</li>
+                <li class="timeline__item" data-timeline-step="2">cena</li>
+                <li class="timeline__item" data-timeline-step="3">grupa docelowa</li>
+                <li class="timeline__item" data-timeline-step="4">zawartość kursu</li>
+                <li class="timeline__item" data-timeline-step="5">wynik</li>
             </ol>
             <section class="section section--form">
                 <div class="hidden" data-step="2">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-step="4">
+                <div class="hidden" data-step="4">
                     <div class="section__content-wrapper">
                         <div class="section__column section__column--full-width">
                             <h2 class="heading heading--h3 column__heading">Co zawiera Twój kurs</h2>
@@ -147,11 +147,11 @@
                 </div>
                 <div class="section__bottom">
                     <div class="bottom__group">
-                        <button type="button" aria-label="Powrót" class="btn btn--white">Powrót</button>
+                        <button id="prevSection" type="button" aria-label="Powrót" class="btn btn--white">Powrót</button>
                     </div>
                     <div class="bottom__group">
                         <span class="bottom__price price"><span class="price__value">0</span><span class="price__currency">PLN</span></span>
-                        <button type="button" aria-label="Dalej" class="btn btn--dark">Dalej</button>
+                        <button id="nextSection" type="button" aria-label="Dalej" class="btn btn--dark">Dalej</button>
                     </div>
                 </div>
             </section>
