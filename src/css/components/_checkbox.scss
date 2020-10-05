@@ -16,7 +16,8 @@
         line-height: 24px;
         color: #142138;
         position: relative;
-        display: inline-block;
+        display: flex;
+        align-items: center;
         &:before {
             content: "";
             width: 24px;
@@ -35,6 +36,43 @@
             top: 7px;
             left: 7px;
             opacity: 0;
+        }
+    }
+    &__tooltip {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url('img/question-circle.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+        position: relative;
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            right: -3px;
+            top: 50%;
+            transform: translate(100%, -50%);
+            width: 240px;
+            padding: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            background-color: #fff;
+            color: #333333;
+            text-align: center;
+            border: 1px solid rgba(20, 33, 56, 0.9);
+            border-radius: 2px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }

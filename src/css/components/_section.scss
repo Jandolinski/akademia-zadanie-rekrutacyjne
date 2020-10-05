@@ -83,6 +83,16 @@
                 }
             }
         }
+        &--flex {
+            display: flex;
+            flex-wrap: wrap;
+            .input-group {
+                &__item {
+                    width: 50%;
+                    padding-right: 15px;
+                }
+            }
+        }
     }
 
     &__bottom {
