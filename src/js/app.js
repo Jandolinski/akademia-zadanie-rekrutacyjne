@@ -135,6 +135,78 @@ const refreshCalculator = () => {
 
 }
 
+const fetchJSONData = new Promise((resolve, reject) => {
+
+    fetch("data.json")
+    .then(response => response.json())
+    .then(json => {
+
+        const inputs = json.inputs;
+
+        for(const inputGroup in inputs) {
+
+            const inputGroupObject = inputs[inputGroup];
+
+            const parentElement = document.getElementById(inputGroupObject.id);
+
+            if(!parentElement) {
+                continue;
+            }
+
+            const inputGroupType = inputGroupObject.type;
+
+            let html = '';
+
+            inputGroupObject.elements.forEach((el, index) => {
+
+                const elementLabel = el.label;
+
+                let elementPrice = el.price;
+
+                if(!elementPrice) {
+
+                    elementPrice = 0;
+
+                }
+
+                html += `<li class="input-group__item ${inputGroupType}">`;
+
+                if(inputGroupType === 'checkbox') {
+
+                    html += `<input type="${inputGroupType}" name="${inputGroup}_${index}" id="${inputGroup}_${index}" data-price="${elementPrice}">`;
+
+                } else if(inputGroupType === 'radio') {
+
+                    html += `<input type="${inputGroupType}" name="${inputGroup}" id="${inputGroup}_${index}" data-price="${elementPrice}">`;
+                
+                }
+
+                html += `
+                    <label for="${inputGroup}_${index}" class="${inputGroupType}__label">${elementLabel}</label>
+                </li>
+                `;
+
+            });
+
+            parentElement.innerHTML = html;
+
+        }
+
+        resolve(true);
+    });
+
+});
+
+const init = () => {
+
+    fetchJSONData.then(res => {
+
+        console.log('JSON fetch success');
+    
+    });
+
+}
+
 const startCalculator = document.getElementById('start');
 const nextBtn = document.getElementById('nextSection');
 const prevBtn = document.getElementById('prevSection');
@@ -144,3 +216,5 @@ startCalculator.addEventListener('click', () => changeSection('next'));
 nextBtn.addEventListener('click', () => changeSection('next'));
 prevBtn.addEventListener('click', () => changeSection('prev'));
 restart.addEventListener('click', refreshCalculator);
+
+window.onload = init;

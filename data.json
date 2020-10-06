@@ -1,0 +1,109 @@
+{
+    "inputs": {
+        "standard_bonuses": {
+            "id": "standardBonuses",
+            "type": "checkbox",
+            "elements": [
+                {
+                    "label": "Podręcznik do pobrania",
+                    "price": 12.90
+                },
+                {
+                    "label": "Ograniczona ilość uczestników",
+                    "price": 50.88
+                },
+                {
+                    "label": "Wywiady z Ekspertami",
+                    "price": 99.99
+                },
+                {
+                    "label": "Transkrypcje wideo",
+                    "price": 80.90
+                }
+            ]
+        },
+        "additional_bonuses": {
+            "id": "additionalBonuses",
+            "type": "checkbox",
+            "elements": [
+                {
+                    "label": "Zamknięta grupa",
+                    "price": 300.88
+                },
+                {
+                    "label": "Webinary OnLine",
+                    "price": 222.22
+                },
+                {
+                    "label": "Cotygodniowe Q&A",
+                    "price": 550.50
+                },
+                {
+                    "label": "Support OnLine",
+                    "price": 120.9
+                }
+            ]
+        },
+        "customer_type": {
+            "id": "customerType",
+            "type": "radio",
+            "elements": [
+                {
+                    "label" : "Osoba początkująca/student"
+                },
+                {
+                    "label" : "Pracownik etatowy zarabiający 3000 - 9000 PLN"
+                },
+                {
+                    "label" : "Przedsiębiorca / Dobrze zarabiający pracownik etatowy"
+                }
+            ]
+        },
+        "course_content": {
+            "id": "courseContent",
+            "type": "checkbox",
+            "elements": [
+                {
+                    "label": "Limitowana ilość dostępów",
+                    "price": 11.11
+                },
+                {
+                    "label": "Tygodniowe Q&A",
+                    "price": 11.11
+                },
+                {
+                    "label": "Dodatkowi instruktorzy (gwiazda)",
+                    "price": 11.11
+                },
+                {
+                    "label": "Miesięczne Q&A",
+                    "price": 11.11
+                },
+                {
+                    "label": "Transkrypcja video",
+                    "price": 11.11
+                },
+                {
+                    "label": "Profesjonalna Produkcja",
+                    "price": 11.11
+                },
+                {
+                    "label": "Online Community",
+                    "price": 11.11
+                },
+                {
+                    "label": "Konsultacje 1:1",
+                    "price": 11.11
+                },
+                {
+                    "label": "In Person Networking Event",
+                    "price": 11.11
+                },
+                {
+                    "label": "Sprawdzanie pracy przez instruktora",
+                    "price": 11.11
+                }
+            ]
+        }
+    }
+}
