@@ -154,12 +154,21 @@ const fetchJSONData = new Promise((resolve, reject) => {
             }
 
             const inputGroupType = inputGroupObject.type;
+            
+            let inputGroupPriceType = inputGroupObject.price_type_affect;
+
+            if(!inputGroupPriceType) {
+
+                inputGroupPriceType = 'none';
+
+            }
 
             let html = '';
 
             inputGroupObject.elements.forEach((el, index) => {
 
                 const elementLabel = el.label;
+
 
                 let elementPrice = el.price;
 
@@ -173,11 +182,11 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
                 if(inputGroupType === 'checkbox') {
 
-                    html += `<input type="${inputGroupType}" name="${inputGroup}_${index}" id="${inputGroup}_${index}" data-price="${elementPrice}">`;
+                    html += `<input type="${inputGroupType}" name="${inputGroup}_${index}" id="${inputGroup}_${index}" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
 
                 } else if(inputGroupType === 'radio') {
 
-                    html += `<input type="${inputGroupType}" name="${inputGroup}" id="${inputGroup}_${index}" data-price="${elementPrice}">`;
+                    html += `<input type="${inputGroupType}" name="${inputGroup}" id="${inputGroup}_${index}" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
                 
                 }
 

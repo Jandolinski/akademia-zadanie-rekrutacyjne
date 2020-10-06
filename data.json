@@ -3,6 +3,7 @@
         "standard_bonuses": {
             "id": "standardBonuses",
             "type": "checkbox",
+            "price_type_affect": "standard",
             "elements": [
                 {
                     "label": "Podręcznik do pobrania",
@@ -25,6 +26,7 @@
         "additional_bonuses": {
             "id": "additionalBonuses",
             "type": "checkbox",
+            "price_type_affect": "with_bonuses",
             "elements": [
                 {
                     "label": "Zamknięta grupa",
@@ -62,6 +64,7 @@
         "course_content": {
             "id": "courseContent",
             "type": "checkbox",
+            "price_type_affect": "standard",
             "elements": [
                 {
                     "label": "Limitowana ilość dostępów",
