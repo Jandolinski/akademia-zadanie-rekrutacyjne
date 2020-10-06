@@ -201,7 +201,7 @@ const init = () => {
 
     fetchJSONData.then(res => {
 
-        console.log('JSON fetch success');
+        document.getElementById('loader').classList.remove('active');
     
     });
 

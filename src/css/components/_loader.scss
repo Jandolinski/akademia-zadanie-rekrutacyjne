@@ -1,0 +1,41 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    z-index: -1;
+    visibility: hidden;
+    transition-delay: 0, .3s, .4s;
+    transition-property: transform, visibility, z-index;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    &__img {
+        display: block;
+        width: 80%;
+        max-width: 400px;
+        animation: pulse 2s infinite;
+    }
+    &.active {
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 999;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
