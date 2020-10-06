@@ -7,12 +7,24 @@ const changeSection = (direction) => {
 
     if(direction === 'next') {
 
+        if(currentSection == 1) {
+
+            document.getElementById('multiStepSection').classList.remove('hidden');
+
+        }
+
         currentSection += 1;
 
         document.querySelector(`[data-step="${currentSection}"]`).classList.remove('hidden');
         document.querySelector(`[data-step="${currentSection}"]`).classList.add('active');
 
     } else if(direction === 'prev') {
+
+        if(currentSection == 2) {
+
+            document.getElementById('multiStepSection').classList.add('hidden');
+
+        }
 
         currentSection -= 1;
 
