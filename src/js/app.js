@@ -1,37 +1,63 @@
-const changeSection = (direction) => {
+const changeSection = direction => {
 
-    let currentSection = parseInt(document.querySelector('.active[data-step]').getAttribute('data-step'));
+    const currentSection = document.querySelector('.active[data-step]');
 
-    document.querySelector('.active[data-step]').classList.add('hidden');
-    document.querySelector('.active[data-step]').classList.remove('active');
+    if(!currentSection) {
+
+        return false;
+
+    }
+
+    let currentSectionNumber = parseInt(currentSection.getAttribute('data-step'));
+
+    currentSection.classList.add('hidden');
+    currentSection.classList.remove('active');
 
     if(direction === 'next') {
 
-        if(currentSection == 1) {
+        if(currentSectionNumber == 1) {
 
             document.getElementById('multiStepSection').classList.remove('hidden');
 
         }
 
-        currentSection += 1;
+        currentSectionNumber += 1;
 
-        document.querySelector(`[data-step="${currentSection}"]`).classList.remove('hidden');
-        document.querySelector(`[data-step="${currentSection}"]`).classList.add('active');
+        const newCurrentSection = document.querySelector(`[data-step="${currentSectionNumber}"]`);
+
+        if(newCurrentSection) {
+
+            newCurrentSection.classList.remove('hidden');
+            newCurrentSection.classList.add('active');
+        
+        }
 
     } else if(direction === 'prev') {
 
-        if(currentSection == 2) {
+        if(currentSectionNumber == 2) {
 
             document.getElementById('multiStepSection').classList.add('hidden');
 
         }
 
-        currentSection -= 1;
+        currentSectionNumber -= 1;
 
-        document.querySelector(`[data-step="${currentSection}"]`).classList.remove('hidden');
-        document.querySelector(`[data-step="${currentSection}"]`).classList.add('active');
+        const newCurrentSection = document.querySelector(`[data-step="${currentSectionNumber}"]`);
+
+        if(newCurrentSection) {
+
+            newCurrentSection.classList.remove('hidden');
+            newCurrentSection.classList.add('active');
+        
+        }
 
     }
+
+    refreshTimeline(currentSectionNumber);
+
+}
+
+const refreshTimeline = currentSection => {
 
     const timelineItems = document.querySelectorAll('.timeline__item[data-timeline-step]');
 
