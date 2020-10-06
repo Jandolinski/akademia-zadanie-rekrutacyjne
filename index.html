@@ -13,7 +13,7 @@
         <header class="header">
             <img src="dist/img/logo-akademia.png" alt="Akademia.pl" class="header__logo">
         </header>
-        <section class="section section--small section--first active" data-step="1">
+        <section class="section section--small section--first hidden" data-step="1">
             <div class="section__text-wrapper">
                 <h1 class="heading heading--h1 section__heading">Kalkulator ceny kursu</h1>
                 <p class="section__description">Tutaj pójdzie przykładowy tekst powitalny.</p>
@@ -21,7 +21,7 @@
             </div>
             <img src="dist/img/monety.png" alt="" class="section__decorator-img">
         </section>
-        <div class="hidden" id="multiStepSection">
+        <div  id="multiStepSection">
             <ol class="timeline">
                 <li class="timeline__item" data-timeline-step="2">cena</li>
                 <li class="timeline__item" data-timeline-step="3">grupa docelowa</li>
@@ -145,30 +145,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden" data-step="5">
+                <div class="" data-step="5">
                     <div class="section__summary">
                         <h2 class="heading heading--h2 summary__heading">Sugerowana cena kursu</h2>
                         <div class="summary__columns">
                             <div class="summary__column">
-                                <p class="summary__price-item">
-                                  <span class="price-item__label">Cena bez bonusów</span>
-                                  <span class="price-item__price price price--small"><span class="price__value">500</span><span class="price__currency">PLN</span></span>
-                                </p>
-                                <p class="summary__price-item">
-                                    <span class="price-item__label">Cena z bonusami</span>
-                                    <span class="price-item__price price price--small"><span class="price__value">750</span><span class="price__currency">PLN</span></span>
-                                  </p>
+                                <ul class="summary__price-items">
+                                    <li class="summary__price-item">
+                                      <span class="price-item__label">Cena bez bonusów:</span>
+                                      <span class="price-item__price price price--small"><span class="price__value">500</span><span class="price__currency">PLN</span></span>
+                                    </li>
+                                    <li class="summary__price-item">
+                                        <span class="price-item__label">Cena z bonusami:</span>
+                                        <span class="price-item__price price price--small"><span class="price__value">750</span><span class="price__currency">PLN</span></span>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="summary__column">
                                 <button id="restart" type="button" class="btn btn--white btn--large summary__btn" aria-label="Oblicz ponownie">Oblicz ponownie</button>
                             </div>
                         </div>
-                        <div class="summary__columns">
+                        <div class="summary__columns summary__columns--centered">
                             <div class="summary__column">
-                                <h2 class="heading heading--h2 summary__heading">Zostań studentem Fabryki Kursów</h2>
+                                <h2 class="heading heading--h2">Zostań studentem Fabryki Kursów</h2>
                             </div>
                             <div class="summary__column">
-                                <a href="https://akademia.pl/fabryka-opis/" target="_blank" rel="nofollow" class="btn btn--dark btn--large summary__btn">Dołącz do Fabryki Kursów</a>
+                                <a href="https://akademia.pl/fabryka-opis/" target="_blank" rel="nofollow" class="btn btn--dark btn--large btn--bold summary__btn">Dołącz do Fabryki Kursów</a>
                             </div>
                         </div>
                         <ul class="summary__boxes">
@@ -183,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section__bottom">
+                <div class="section__bottom hidden">
                     <div class="bottom__group">
                         <button id="prevSection" type="button" aria-label="Powrót" class="btn btn--white">Powrót</button>
                     </div>
