@@ -70,11 +70,11 @@
                         <div class="summary__columns">
                             <div class="summary__column">
                                 <ul class="summary__price-items">
-                                    <li class="summary__price-item">
+                                    <li id="standardPrice" class="summary__price-item">
                                       <span class="price-item__label">Cena bez bonusów:</span>
                                       <span class="price-item__price price price--small"><span class="price__value">500</span><span class="price__currency">PLN</span></span>
                                     </li>
-                                    <li class="summary__price-item">
+                                    <li id="summaryWholePrice" class="summary__price-item">
                                         <span class="price-item__label">Cena z bonusami:</span>
                                         <span class="price-item__price price price--small"><span class="price__value">750</span><span class="price__currency">PLN</span></span>
                                     </li>
@@ -109,7 +109,7 @@
                         <button id="prevSection" type="button" aria-label="Powrót" class="btn btn--white">Powrót</button>
                     </div>
                     <div class="bottom__group">
-                        <span class="bottom__price price"><span class="price__value">0</span><span class="price__currency">PLN</span></span>
+                        <span id="wholePrice" class="bottom__price price"><span class="price__value">0</span><span class="price__currency">PLN</span></span>
                         <button id="nextSection" type="button" aria-label="Dalej" class="btn btn--dark">Dalej</button>
                     </div>
                 </div>

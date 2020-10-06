@@ -112,6 +112,8 @@ const refreshInputs = () => {
 
     });
 
+    recalculatePrices();
+
 }
 
 const refreshCalculator = () => {
@@ -133,6 +135,64 @@ const refreshCalculator = () => {
     firstSection.classList.add('active');
 
 
+}
+
+const recalculatePrices = () => {
+
+    const inputs = Array.from(document.querySelectorAll('input[type="checkbox"]:checked, input[type="radio"]:checked'));
+    
+    let wholePriceValue = 0;
+
+    let standardPriceValue = 0;
+
+    const wholePrice = document.querySelectorAll('#wholePrice .price__value, #summaryWholePrice .price__value');
+    
+    const standardPrice = document.querySelector('#standardPrice .price__value');
+
+    if(inputs.length <= 0) {
+
+        wholePrice.forEach(priceEl => {
+
+            priceEl.textContent = 0;
+
+        });
+
+        standardPrice.textContent = 0;
+
+    
+        return false;
+
+    }
+
+
+    inputs.forEach(input => {
+
+        const inputPrice = Number(input.getAttribute('data-price'));
+        
+        const inputPriceType = input.getAttribute('data-price-type');
+    
+        if(inputPrice > 0 && (inputPriceType === 'standard' || inputPriceType === 'with_bonuses')) {
+
+            wholePriceValue += inputPrice;
+    
+            if(inputPriceType === 'standard') {
+
+                standardPriceValue += inputPrice;
+
+            }
+            
+        }
+        
+    });
+
+    wholePrice.forEach(priceEl => {
+
+        priceEl.textContent = wholePriceValue.toFixed(2);
+
+    });
+
+    standardPrice.textContent = standardPriceValue.toFixed(2);
+    
 }
 
 const fetchJSONData = new Promise((resolve, reject) => {
@@ -212,18 +272,27 @@ const init = () => {
 
         document.getElementById('loader').classList.remove('active');
     
+        const startCalculator = document.getElementById('start');
+        const nextBtn = document.getElementById('nextSection');
+        const prevBtn = document.getElementById('prevSection');
+        const restart = document.getElementById('restart');
+
+        startCalculator.addEventListener('click', () => changeSection('next'));
+        nextBtn.addEventListener('click', () => changeSection('next'));
+        prevBtn.addEventListener('click', () => changeSection('prev'));
+        restart.addEventListener('click', refreshCalculator);
+
+        const inputs = Array.from(document.querySelectorAll('input[type="checkbox"], input[type="radio"]'));
+
+        inputs.forEach(input => {
+        
+            input.addEventListener('change', recalculatePrices);
+        
+        });
+    
     });
 
 }
 
-const startCalculator = document.getElementById('start');
-const nextBtn = document.getElementById('nextSection');
-const prevBtn = document.getElementById('prevSection');
-const restart = document.getElementById('restart');
-
-startCalculator.addEventListener('click', () => changeSection('next'));
-nextBtn.addEventListener('click', () => changeSection('next'));
-prevBtn.addEventListener('click', () => changeSection('prev'));
-restart.addEventListener('click', refreshCalculator);
 
 window.onload = init;
