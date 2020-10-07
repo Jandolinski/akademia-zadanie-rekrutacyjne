@@ -145,7 +145,7 @@ const recalculatePrices = () => {
 
     let standardPriceValue = 0;
 
-    const wholePrice = document.querySelectorAll('#wholePrice .price__value, #summaryWholePrice .price__value');
+    const wholePrice = Array.from(document.querySelectorAll('#wholePrice .price__value, #summaryWholePrice .price__value'));
     
     const standardPrice = document.querySelector('#standardPrice .price__value');
 

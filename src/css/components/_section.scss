@@ -173,6 +173,7 @@
             &__box {
                 width: calc((100% / 10) - 22px);
                 min-width: 68px;
+                flex-basis: 68px;
                 height: 68px;
                 background-color: #FFFFFF;
                 box-shadow: 0px 0px 15px rgba(#000000, 0.1);
