@@ -7,7 +7,7 @@ body {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 64px;
 }
 
 .hidden {
@@ -25,4 +25,12 @@ body {
 	position: absolute !important;
 	width: 1px !important;
 	white-space: nowrap !important;
+}
+
+@media screen and (max-width: 690px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
 }
