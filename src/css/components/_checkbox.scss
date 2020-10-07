@@ -74,4 +74,57 @@
             }
         }
     }
+
+    &--with-tooltip {
+        .checkbox {
+            &__label {
+                .label {
+                    &__text {
+                        max-width: calc(100% - 34px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+
+    .checkbox {
+        &__tooltip {
+            &::before {
+                bottom: auto;
+                right: auto;
+                top: -5px;
+                left: 22px;
+                transform: translate(-100%, -100%);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .checkbox {
+        &__label {
+            font-size: 14px;
+            line-height: 22px;
+            &::before {
+                width: 22px;
+                height: 22px;
+            }
+            &::after {
+                top: 6px;
+                left: 6px;
+            }
+        }
+        &__tooltip {
+            &::before {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
 }

@@ -13,3 +13,14 @@
         line-height: 48px;
     }
 }
+
+@media screen and (max-width: 590px) {
+    .price {
+        font-size: 32px;
+        line-height: 40px;
+        &--small {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}

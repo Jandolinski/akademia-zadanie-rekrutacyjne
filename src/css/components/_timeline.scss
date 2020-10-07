@@ -77,11 +77,18 @@
             flex-direction: row;
             justify-content: flex-start;
             text-align: left;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 20px;
 
             &::after {
                 order: -1;
-                margin-right: 32px;
+                margin-top: 0;
+                margin-right: 16px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }

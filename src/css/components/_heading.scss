@@ -21,3 +21,22 @@
         color: #000000;
     }
 }
+
+@media screen and (max-width: 420px) {
+
+    .heading {
+        &--h1 {
+            font-size: 24px;
+            line-height: 35px;
+        }
+        &--h2 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &--h3 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+}

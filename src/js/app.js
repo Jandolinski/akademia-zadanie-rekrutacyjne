@@ -240,7 +240,15 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
                 }
 
-                html += `<li class="input-group__item ${inputGroupType}">`;
+                if(elementTooltip) {
+
+                    html += `<li class="input-group__item ${inputGroupType} ${inputGroupType}--with-tooltip">`;
+
+                } else {
+
+                    html += `<li class="input-group__item ${inputGroupType}">`;
+
+                }
 
                 if(inputGroupType === 'checkbox') {
 
@@ -252,7 +260,7 @@ const fetchJSONData = new Promise((resolve, reject) => {
                 
                 }
 
-                html += `<label for="${inputGroup}_${index}" class="${inputGroupType}__label">${elementLabel}`;
+                html += `<label for="${inputGroup}_${index}" class="${inputGroupType}__label"><span class="label__text">${elementLabel}</span>`;
 
                 if(elementTooltip) {
 
