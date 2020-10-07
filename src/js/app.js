@@ -232,6 +232,8 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
                 let elementPrice = el.price;
 
+                const elementTooltip = el.tooltip;
+
                 if(!elementPrice) {
 
                     elementPrice = 0;
@@ -250,10 +252,15 @@ const fetchJSONData = new Promise((resolve, reject) => {
                 
                 }
 
-                html += `
-                    <label for="${inputGroup}_${index}" class="${inputGroupType}__label">${elementLabel}</label>
-                </li>
-                `;
+                html += `<label for="${inputGroup}_${index}" class="${inputGroupType}__label">${elementLabel}`;
+
+                if(elementTooltip) {
+
+                    html += `<span class="checkbox__tooltip" data-text="${elementTooltip}"></span>`;
+
+                }
+
+                html += '</label></li>';
 
             });
 

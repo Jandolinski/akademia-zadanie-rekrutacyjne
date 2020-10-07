@@ -68,7 +68,8 @@
             "elements": [
                 {
                     "label": "Limitowana ilość dostępów",
-                    "price": 11.11
+                    "price": 11.11,
+                    "tooltip": "Lorem ipsum, lorem ipsum"
                 },
                 {
                     "label": "Tygodniowe Q&A",
