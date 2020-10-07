@@ -9,6 +9,58 @@
     text-align: center;
     cursor: pointer;
 
+    &--next,
+    &--prev {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            background-image: url('img/next.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 50%;
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: .3s;
+            transition-timing-function: ease-in-out;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--next {
+        &::before {
+            right: 25px;
+            transform: translate(150%, -50%);
+        }
+        
+        &:hover {
+            &::before {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    &--prev {
+        &::before {
+            left: 25px;
+            transform: translate(-150%, -50%) rotate(180deg);
+        }
+        &:hover {
+            &::before {
+                transform: translate(0, -50%) rotate(180deg);
+            }
+        }
+    }
+
     &--dark {
         background-color: #142138;
         color: #FFFFFF;
