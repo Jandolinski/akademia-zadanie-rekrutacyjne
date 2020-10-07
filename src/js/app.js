@@ -262,11 +262,11 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
                 if(elementTooltip) {
 
-                    html += `<li class="input-group__item ${inputGroupType} ${inputGroupType}--with-tooltip">`;
+                    html += `<li class="input-group__item custom-input ${inputGroupType} custom-input--with-tooltip">`;
 
                 } else {
 
-                    html += `<li class="input-group__item ${inputGroupType}">`;
+                    html += `<li class="input-group__item custom-input ${inputGroupType}">`;
 
                 }
 
@@ -280,11 +280,11 @@ const fetchJSONData = new Promise((resolve, reject) => {
                 
                 }
 
-                html += `<label for="${inputGroup}_${index}" class="${inputGroupType}__label"><span class="label__text">${elementLabel}</span>`;
+                html += `<label for="${inputGroup}_${index}" class="custom-input__label ${inputGroupType}__label"><span class="label__text">${elementLabel}</span>`;
 
                 if(elementTooltip) {
 
-                    html += `<span class="checkbox__tooltip" data-text="${elementTooltip}"></span>`;
+                    html += `<span class="custom-input__tooltip" data-text="${elementTooltip}"></span>`;
 
                 }
 

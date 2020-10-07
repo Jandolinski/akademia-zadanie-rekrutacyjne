@@ -1,0 +1,131 @@
+.custom-input {
+    input:checked {
+        & + .custom-input__label {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        padding-left: 45px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            border: 2px solid $green;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $green;
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            opacity: 0;
+        }
+    }
+
+    &__tooltip {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url('img/question-circle.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 10px;
+        position: relative;
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            right: -3px;
+            top: 50%;
+            transform: translate(100%, -50%);
+            width: 240px;
+            padding: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            background-color: #fff;
+            color: #333333;
+            text-align: center;
+            border: 1px solid rgba(20, 33, 56, 0.9);
+            border-radius: 2px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &--with-tooltip {
+        .custom-input {
+            &__label {
+                .label {
+                    &__text {
+                        max-width: calc(100% - 34px);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+    .custom-input {
+        &__tooltip {
+            &::before {
+                bottom: auto;
+                right: auto;
+                top: -5px;
+                left: 22px;
+                transform: translate(-100%, -100%);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .custom-input {
+        &__label {
+            font-size: 14px;
+            line-height: 22px;
+            &::before {
+                width: 22px;
+                height: 22px;
+            }
+            &::after {
+                top: 6px;
+                left: 6px;
+            }
+        }
+        &__tooltip {
+            &::before {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
+}
