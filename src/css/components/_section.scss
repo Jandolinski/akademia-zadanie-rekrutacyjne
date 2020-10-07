@@ -33,13 +33,12 @@
             content: '';
             width: 97px;
             height: 80px;
-            background-image: url('img/heading-arrow.png');
+            background-image: url('img/heading-arrow.svg');
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
             right: 0;
             top: 0;
-            // transform: translate(100%, -20px);
             transform: matrix(-.67,-.59,-.97,.64,0,0) translate(-85%,-92%);
         }
     }
