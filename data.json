@@ -108,5 +108,127 @@
                 }
             ]
         }
-    }
+    },
+    "summary_boxes" : [
+        {
+            "img": "dist/img/summary__box--1.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--2.png",
+            "alt": "Skup się wreszcie",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--3.png",
+            "alt": "Annapro przemawiaj profesjonalnie",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--4.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--5.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--6.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--7.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "rgba(0,0,0,0.91)"
+        },
+        {
+            "img": "dist/img/summary__box--8.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#044357"
+        },
+        {
+            "img": "dist/img/summary__box--9.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--10.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--11.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--12.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--13.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--14.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#FFFCF5"
+        },
+        {
+            "img": "dist/img/summary__box--15.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--16.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--17.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "rgba(0,0,0,0.85)"
+        },
+        {
+            "img": "dist/img/summary__box--18.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "rgba(0,0,0,0.81)"
+        },
+        {
+            "img": "dist/img/summary__box--19.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        },
+        {
+            "img": "dist/img/summary__box--20.png",
+            "alt": "Szkoła podcastu",
+            "link": "https://google.com",
+            "background_color": "#fff"
+        }
+    ]
 }

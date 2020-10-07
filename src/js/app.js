@@ -261,8 +261,47 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
         }
 
+        const summaryBoxes = json.summary_boxes;
+
+        const summaryBoxesWrapper = document.getElementById('summaryBoxes');
+
+        let summaryBoxesHTML = '';
+
+        summaryBoxes.forEach(el => {
+
+            let img = el.img;
+            let alt = el.alt;
+            let link = el.link;
+            let background = el.background_color;
+
+            if(!img) {
+                return false;
+            }
+            if(!alt) {
+                alt = '';
+            }
+            if(!link) {
+                link = '';
+            }
+            if(!background) {
+                background = '#fff';
+            }
+
+            summaryBoxesHTML += `
+            <li class="summary__box" style="background-color:${background}">
+                <a href="${link}" target="_blank" rel="nofollow" class="box__link">
+                    <img src="${img}" alt="${alt}" class="box__img">
+                </a>
+            </li>
+            `;
+
+        });
+
+        summaryBoxesWrapper.innerHTML = summaryBoxesHTML;
+
         resolve(true);
     });
+
 
 });
 
