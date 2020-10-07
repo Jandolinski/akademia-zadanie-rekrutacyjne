@@ -244,11 +244,11 @@ const fetchJSONData = new Promise((resolve, reject) => {
 
                 if(inputGroupType === 'checkbox') {
 
-                    html += `<input type="${inputGroupType}" name="${inputGroup}_${index}" id="${inputGroup}_${index}" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
+                    html += `<input type="${inputGroupType}" name="${inputGroup}_${index}" id="${inputGroup}_${index}" class="sr-only" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
 
                 } else if(inputGroupType === 'radio') {
 
-                    html += `<input type="${inputGroupType}" name="${inputGroup}" id="${inputGroup}_${index}" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
+                    html += `<input type="${inputGroupType}" name="${inputGroup}" id="${inputGroup}_${index}" class="sr-only" data-price="${elementPrice}" data-price-type="${inputGroupPriceType}">`;
                 
                 }
 

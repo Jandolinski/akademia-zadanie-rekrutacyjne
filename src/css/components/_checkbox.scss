@@ -1,6 +1,5 @@
 .checkbox {
     input[type="checkbox"] {
-        display: none;
         &:checked {
             & + .checkbox__label {
                 &::after {
