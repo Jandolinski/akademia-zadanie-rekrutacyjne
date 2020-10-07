@@ -1,6 +1,7 @@
 body {
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -11,7 +12,16 @@ body {
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    transform: translateX(100vw);
+}
+
+[data-step] {
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .sr-only {
