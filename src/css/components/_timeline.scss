@@ -14,7 +14,7 @@
         bottom: 20px;
         width: calc(100% - 40px);
         height: 2px;
-        background-color: #2EB779;
+        background-color: $green;
         transform: translateX(-50%);
     }
     &__item {
@@ -41,18 +41,18 @@
         
         &--active {
             font-weight: 800;
-            color: #142138;
+            color: $dark;
             &::after {
                 background-color: #FFFFFF;
-                border-color: #2EB779;
+                border-color: $green;
             }
         }
 
         &--completed {
-            color: #142138;
+            color: $dark;
             &::after {
-                background-color: #2EB779;
-                border-color: #2EB779;
+                background-color: $green;
+                border-color: $green;
             }
         }
     }

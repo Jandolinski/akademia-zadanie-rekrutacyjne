@@ -62,12 +62,12 @@
     }
 
     &--dark {
-        background-color: #142138;
+        background-color: $dark;
         color: #FFFFFF;
     }
     &--white {
         background-color: #fff;
-        color: #142138;
+        color: $dark;
     }
     &--large {
         padding: 25px 50px;
