@@ -1,0 +1,28 @@
+.checkbox {
+    &__label {
+        &::after {
+            content: "";
+            color: $green;
+            background-color: transparent;
+            height: 7px;
+            width: 12px;
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            transform: rotate(-45deg);
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .checkbox {
+        &__label {
+            &::after {
+                left: 6px;
+                top: 6px;
+            }
+        }
+    }
+
+}
