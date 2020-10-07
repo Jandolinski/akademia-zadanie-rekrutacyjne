@@ -185,13 +185,33 @@ const recalculatePrices = () => {
         
     });
 
+    if(Number.isInteger(wholePriceValue)) {
+
+        wholePriceValue = wholePriceValue.toFixed(0);
+
+    } else {
+
+        wholePriceValue = wholePriceValue.toFixed(2)
+
+    }
+
     wholePrice.forEach(priceEl => {
 
-        priceEl.textContent = wholePriceValue.toFixed(2);
+        priceEl.textContent = wholePriceValue;
 
     });
 
-    standardPrice.textContent = standardPriceValue.toFixed(2);
+    if(Number.isInteger(standardPriceValue)) {
+
+        standardPriceValue = standardPriceValue.toFixed(0);
+
+    } else {
+
+        standardPriceValue = standardPriceValue.toFixed(2)
+
+    }
+
+    standardPrice.textContent = standardPriceValue;
     
 }
 
