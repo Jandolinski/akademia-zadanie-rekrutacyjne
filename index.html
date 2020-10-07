@@ -10,11 +10,11 @@
 </head>
 <body>
     <div id="loader" class="loader active">
-        <img src="dist/img/logo-akademia.png" alt="Akademia.pl" aria-hidden="true" class="loader__img">
+        <img loading="lazy" src="dist/img/logo-akademia.png" alt="Akademia.pl" aria-hidden="true" class="loader__img">
     </div>
     <div class="container">
         <header class="header">
-            <img src="dist/img/logo-akademia.png" alt="Akademia.pl" class="header__logo">
+            <img loading="lazy" src="dist/img/logo-akademia.png" alt="Akademia.pl" class="header__logo">
         </header>
         <section class="section section--small section--first active" data-step="1">
             <div class="section__text-wrapper">
@@ -22,7 +22,7 @@
                 <p class="section__description">Tutaj pójdzie przykładowy tekst powitalny.</p>
                 <button id="start" type="button" aria-label="Przejdź do kalkulatora" class="btn btn--next btn--dark btn--large">Przejdź do kalkulatora</button>
             </div>
-            <img src="dist/img/monety.png" alt="" class="section__decorator-img">
+            <img loading="lazy" src="dist/img/monety.png" alt="" class="section__decorator-img">
         </section>
         <div class="hidden" id="multiStepSection">
             <ol class="timeline">
@@ -93,11 +93,6 @@
                             </div>
                         </div>
                         <ul id="summaryBoxes" class="summary__boxes">
-                            <!-- <li class="summary__box">
-                                <a href="#" class="box__link">
-                                    <img src="dist/img/summary__box--1.png" alt="Szkoła podcastu" class="box__img">
-                                </a>
-                            </li> -->
                         </ul>
                         <div class="summary__bottom">
                             <p class="summary__signature">To już prawie 1k osób!</p>

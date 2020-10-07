@@ -297,7 +297,7 @@ const fetchJSONData = new Promise((resolve, reject) => {
             summaryBoxesHTML += `
             <li class="summary__box" style="background-color:${background}">
                 <a href="${link}" target="_blank" rel="nofollow" class="box__link">
-                    <img src="${img}" alt="${alt}" class="box__img">
+                    <img loading="lazy" src="${img}" alt="${alt}" class="box__img">
                 </a>
             </li>
             `;
